@@ -53,8 +53,37 @@ public class BlackjackApp {
 					break;
 				}
 				else System.out.println("Sorry I don't understand.");
-			} if (ourPlayer.isBust()) System.out.println("You busted, thanks for playing");
+			} 
+			
+			if (ourPlayer.isBust())  {
+				System.out.println("You busted, thanks for playing");
+				return;
+			}
+	
+			while (ourDealer.canHit()) {
+				ourDealer.addCard(ourDeck.dealCard());
+				System.out.println(ourDealer.toString() + " = " + ourDealer.getHandValue());
+			}
+			if (ourDealer.isBust()) {
+				System.out.println("Dealer busts! You win!");
+				return;
+			}
+			if (ourPlayer.getHandValue() == ourDealer.getHandValue()) {
+				System.out.println("Tie game, nobody wins.");
+			}
+			else if (ourPlayer.isBlackjack()) {
+				System.out.println("Player wins!");
+			}
+			else if (ourDealer.isBlackjack()) {
+				System.out.println("Dealer wins!");
+			}
+			else if (ourPlayer.getHandValue() > ourDealer.getHandValue()) {
+				System.out.println("Player wins!");
+			}
+			else System.out.println("Dealer wins!");
+		// now dealer begins play	
 	}
+	
 	public void printMessage() {
 		System.out.println("Welcome to Blackjack, prepare to play. ");
 	}

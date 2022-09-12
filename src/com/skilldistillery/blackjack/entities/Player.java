@@ -8,5 +8,4 @@ public class Player extends Participant {
 	public Player() {
 		// TODO Auto-generated constructor stub
 	}
-
 }

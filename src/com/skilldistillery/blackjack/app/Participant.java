@@ -23,5 +23,9 @@ public abstract class Participant {
 	public int getHandValue() {
 		return hand.getHandValue(); // added to call specifically the total.
 	}
+
+	public boolean isBlackjack() {
+		return hand.isBlackjack();
+	}
 }
 
