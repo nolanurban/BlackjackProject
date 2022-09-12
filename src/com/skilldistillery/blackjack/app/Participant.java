@@ -18,7 +18,7 @@ public abstract class Participant {
 	}
 	@Override
 	public String toString() {
-		return " " + hand;
+		return "" + hand;
 	}
 	public int getHandValue() {
 		return hand.getHandValue(); // added to call specifically the total.
