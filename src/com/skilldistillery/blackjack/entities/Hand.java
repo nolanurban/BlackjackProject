@@ -21,8 +21,12 @@ public abstract class Hand {
 	public String toString() {
 		String str = "";
 		for (Card card : hand)
-			str += card.getValue() + " of " + card.getSuit();
+			str += "\n" + card.getValue() + " of " + card.getSuit() + "\n";
 		return str;
+	}
+	
+	public List<Card> getAllCards() {
+		return hand;
 	}
 	
 	

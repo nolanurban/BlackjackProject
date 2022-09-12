@@ -18,7 +18,10 @@ public abstract class Participant {
 	}
 	@Override
 	public String toString() {
-		return "Participant [hand=" + hand + "]" + " = " + hand.getHandValue();
+		return " " + hand;
+	}
+	public int getHandValue() {
+		return hand.getHandValue(); // added to call specifically the total.
 	}
 }
 
