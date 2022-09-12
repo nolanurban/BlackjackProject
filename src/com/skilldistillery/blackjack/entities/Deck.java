@@ -15,7 +15,16 @@ public class Deck {
 		for (Suit suits : Suit.values())
 			for (Rank ranks : Rank.values()) {
 				Card card = new Card(suits, ranks);
+				cardDeck.add(card);
 			}
+	}
+
+	@Override
+	public String toString() {
+		String str = "";
+		for (Card card : cardDeck)
+			str += card.getSuit() + " " + card.getValue();
+		return str;
 	}
 
 	public int checkDeckSize() {
